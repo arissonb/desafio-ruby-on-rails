@@ -46,7 +46,7 @@ Sua tarefa é criar uma interface web que aceite upload do arquivo CNAB, normali
 
 **Clone o projeto**
 
-° Execute o comando git clone https://github.com/ByCodersTec/desafio-ruby-on-rails.git
+° Execute o comando git clone https://github.com/arissonb/desafio-ruby-on-rails.git
 
 **Entre na pasta do projeto**
 
