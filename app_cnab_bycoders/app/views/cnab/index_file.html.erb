@@ -1,0 +1,15 @@
+<%= form_tag "/attach/file", method: :post, :enctype => "multipart/form-data" do %>
+
+
+<div class="row">
+    <label for="">Arquivo CNAB</label>
+    <%= link_to "Voltar", root_path , class:"button2"%>
+    <br>
+    <br>
+    <hr>
+    <input type="file" id="fname" name="anexo" accept=".txt">
+    <br>
+    <button type="submit" name="myButton" value="Submit" class="button button1">Anexar</button>
+</div>
+
+<% end %>

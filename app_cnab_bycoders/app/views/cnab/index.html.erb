@@ -1,0 +1,67 @@
+<div>
+    <% flash.each do |type, msg| %>
+    <div class="success alert-info">
+        <%= msg %>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    <% end %>
+    <br>
+    <br>
+    <label for="">Movimentações Financeiras</label>
+    <%= link_to "Anexar arquivo CNAB",    index_file_path, class:"button2" %>
+
+    <br>
+    <br>
+
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Dono da loja</th>
+                <th>Cpf</th>
+                <th>Nome da loja</th>
+                <th>Cartão</th>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Natureza</th>
+                <th>Sinal</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Valor</th>
+                <th>Totalizador</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% if @cnabs.present? %>
+            <% @cnabs.each do |cnab| %>
+            <tr>
+                <td> <%= cnab.id %></td>
+                <td> <%= cnab.dono_loja %></td>
+                <td> <%= cnab.cpf %></td>
+                <td> <%= cnab.nome_loja %></td>
+                <td> <%= cnab.cartao %></td>
+                <td> <%= cnab.transacao_id %></td>
+                <td> <%= cnab.transacao.descricao %></td>
+                <td> <%= cnab.transacao.natureza %></td>
+                <td> <%= cnab.transacao.sinal %></td>
+                <td> <%= cnab.data.strftime(" %m/%d/%Y") %></td>
+                <td> <%= cnab.hora %></td>
+                <td> <%= cnab.valor %></td>
+                <td> <%= cnab.totalizador(cnab.cpf)%></td>
+            </tr>
+            <% end %>
+            <% else  %>
+            <tr>
+                <td colspan="14"> SEM DADOS </td>
+            </tr>
+            <% end %>
+        </tbody>
+
+    </table>
+    <br>
+    <%= "Usuario logado: #{current_usuario.email}" %>
+    <%= link_to "SAIR",    destroy_usuario_session_path, class:"button3", method: :delete %>
+
+</div>

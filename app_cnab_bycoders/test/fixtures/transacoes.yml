@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: 1
+  descricao: MyString
+  natureza: MyString
+  sinal: MyString
+
+two:
+  tipo: 1
+  descricao: MyString
+  natureza: MyString
+  sinal: MyString
