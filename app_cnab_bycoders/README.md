@@ -11,22 +11,31 @@ Sua tarefa é criar uma interface web que aceite upload do arquivo CNAB, normali
 # Tarefas
 
 ° Acesso com login e senha
+
 ° Pagina de upload do arquivo CNAB
+
 ° Pagina inicial com todas as transações importadas por loja
+
 ° Consultas e alterações de dados através da API
 
 # Tecnologias utilizadas
 
 ° Ruby 2.7.1p83
+
 ° Rails 6.0.3.4
+
 ° Postgres 13.0-1
 
 # Gems mais utilizadas
 
 ° gem 'pg'
+
 ° gem 'devise'
+
 ° gem 'rubocop-rails'
+
 ° gem 'rspec-rails'
+
 ° gem 'simplecov'
 
 # Iniciar o projeto
@@ -42,13 +51,16 @@ Sua tarefa é criar uma interface web que aceite upload do arquivo CNAB, normali
 **Entre na pasta do projeto**
 
 1.Execute o comando bundle install dentro da pasta do projeto
+
 2.Configure o arquivo  database.yml de acordo com a configuração do seu banco de dados
+
 3.Em seguida rode o comando rails db:seed para popular a tabela Transação
+
 4.E por fim execute o comando **rails s** para subir a aplicação na porta 3000 
 
 **Tela de login**
 
-° O usuario pode criar qualquer usuario para logar no sistema 
+° O pode ser criado qualquer usuario para logar no sistema 
 
 # API EndPoints:
 
